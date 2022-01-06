@@ -17,6 +17,8 @@
   background: var(--background);
 
   overflow: hidden;
+
+  min-width: 270px;
 }
 
 :host(.datetime-size-fixed) {
@@ -86,17 +88,7 @@
 :host(.show-month-and-year) .calendar-days-of-week,
 :host(.show-month-and-year) .calendar-body,
 :host(.show-month-and-year) .datetime-time {
-  @include position(null, null, null, -99999px);
-
-  position: absolute;
-
-  /**
-   * Use visibility instead of
-   * opacity to ensure element
-   * cannot receive focus
-   */
-  visibility: hidden;
-  pointer-events: none;
+  display: none;
 }
 
 :host(.datetime-readonly),

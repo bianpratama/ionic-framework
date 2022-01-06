@@ -702,6 +702,10 @@ export class Datetime implements ComponentInterface {
         const ev = entries[0];
         if (!ev.isIntersecting) { return; }
 
+        const scrollLeft = calendarBodyRef.scrollLeft;
+
+        console.log('helloooooooooooo', callbackType, entries, calendarBodyRef.scrollLeft, calendarBodyRef.getBoundingClientRect(), startMonth.getBoundingClientRect(), endMonth.getBoundingClientRect())
+
         /**
          * When presenting an inline overlay,
          * subsequent presentations will cause
